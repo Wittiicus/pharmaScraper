@@ -1,0 +1,44 @@
+message number = 0, process id = 28997, time and date = 23:43:31 03/13/22
+ [pid=1811305192,tid=62623744,index=0,name=Person0] Enter Message:
+ 1 
+
+message number = 1, process id = 28997, time and date = 23:43:31 03/13/22
+ [pid=1811305192,tid=63160320,index=1,name=Person1] Enter Message:
+ 2
+
+message number = 2, process id = 28997, time and date = 23:43:32 03/13/22
+ [pid=1811305192,tid=63696896,index=2,name=Person2] Enter Message:
+ 3
+
+message number = 3, process id = 28997, time and date = 23:43:32 03/13/22
+ [pid=1811305192,tid=64233472,index=3,name=Person3] Enter Message:
+ 4
+
+message number = 4, process id = 28997, time and date = 23:43:32 03/13/22
+ [pid=1811305192,tid=62623744,index=0,name=Person0] Enter Message:
+ 5
+
+message number = 5, process id = 28997, time and date = 23:43:33 03/13/22
+ [pid=1811305192,tid=63160320,index=1,name=Person1] Enter Message:
+ 3
+
+message number = 6, process id = 28997, time and date = 23:43:33 03/13/22
+ [pid=1811305192,tid=63696896,index=2,name=Person2] Enter Message:
+ 2
+
+message number = 7, process id = 28997, time and date = 23:43:34 03/13/22
+ [pid=1811305192,tid=64233472,index=3,name=Person3] Enter Message:
+ 3
+
+message number = 8, process id = 28997, time and date = 23:43:35 03/13/22
+ [pid=1811305192,tid=62623744,index=0,name=Person0] Enter Message:
+ user quit
+message number = 9, process id = 28997, time and date = 23:43:37 03/13/22
+ [pid=1811305192,tid=63160320,index=1,name=Person1] Enter Message:
+ user quit
+message number = 10, process id = 28997, time and date = 23:43:38 03/13/22
+ [pid=1811305192,tid=63696896,index=2,name=Person2] Enter Message:
+ user quit
+message number = 11, process id = 28997, time and date = 23:43:39 03/13/22
+ [pid=1811305192,tid=64233472,index=3,name=Person3] Enter Message:
+ user quit
