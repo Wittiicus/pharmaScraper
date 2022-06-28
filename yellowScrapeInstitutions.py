@@ -17,7 +17,7 @@ province = []
 numbersForCompany = []
 
 
-url = 'https://www.yellowpages.ca/search/si/1/Pharmacies/Canada'
+url = 'https://www.yellowpages.ca/search/si/1/Pharmacy/Ontario+ON'
 
 headers = {'Accept-Encoding' : 'gzip, deflate, br', 
             'user-agent': 'Mozilla/5.0', 
@@ -81,9 +81,9 @@ def getNumberOfPages(url):
 
 numberOfPages = int(getNumberOfPages(url))
 
-for x in range(1, 3):
+for x in range(1, numberOfPages):
     print(f'Im on page {x} We are getting there')
-    totalArticles = scrape(f'https://www.yellowpages.ca/search/si/{x}/Pharmacies/Canada')
+    totalArticles = scrape(f'https://www.yellowpages.ca/search/si/{x}/Pharmacy/Ontario+ON')
     extractData(totalArticles)
     print(f'Data Extracted, now on to page {x + 1}')
     time.sleep(1)
@@ -105,6 +105,6 @@ print(tabulate(df, headers = 'keys', tablefmt = 'psql'))
 
 
 #writer = pd.ExcelWriter('demo.xlsx', engine='xlsxwriter')
-df.to_csv('CanadianPharmacies.csv', index=False)
+df.to_csv('OntarioPharmacies.csv', index=False)
 print('loaded into the csv file, check it out')
 #writer.save()
