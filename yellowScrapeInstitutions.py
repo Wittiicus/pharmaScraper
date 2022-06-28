@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import urllib.request, requests 
 import pandas as pd 
 from tabulate import tabulate
+import time
 
 nameData = []
 companyName = []
@@ -78,11 +79,16 @@ def getNumberOfPages(url):
     return textData.strip()
 
 
-print(getNumberOfPages(url))
+numberOfPages = int(getNumberOfPages(url))
 
+for x in range(1, 3):
+    print(f'Im on page {x} We are getting there')
+    totalArticles = scrape(f'https://www.yellowpages.ca/search/si/{x}/Pharmacies/Canada')
+    extractData(totalArticles)
+    print(f'Data Extracted, now on to page {x + 1}')
+    time.sleep(1)
 
-rawData = scrape(url)
-extractData(rawData)
+print("Now formatting the Data, get ready for a list \n")
 
 dict = {'Company Name': companyName,
         'Street Address':streetAddress,
@@ -93,10 +99,12 @@ dict = {'Company Name': companyName,
 
 
 df = pd.DataFrame(dict)
-  
+print("All done now creating the list :)")
 # displaying the DataFrame
-#print(tabulate(df, headers = 'keys', tablefmt = 'psql'))
+print(tabulate(df, headers = 'keys', tablefmt = 'psql'))
 
 
-writer = pd.ExcelWriter('demo.xlsx', engine='xlsxwriter')
-writer.save()
+#writer = pd.ExcelWriter('demo.xlsx', engine='xlsxwriter')
+df.to_csv('CanadianPharmacies.csv', index=False)
+print('loaded into the csv file, check it out')
+#writer.save()
